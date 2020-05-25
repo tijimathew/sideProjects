@@ -1,0 +1,8 @@
+- The game must restart based on user input
+- The board should also display the number associated with each box of the board
+- The board in play should display the currently occupied marks and empty boxes available after each turn.
+- A random player will go first
+- The player going first will be assigned 'X' while the second player will get 'O'
+- The game will wait for the player to choose the square in which they will place their mark
+- The player who places the same mark vertically, horizontally or diagonally first wins
+
