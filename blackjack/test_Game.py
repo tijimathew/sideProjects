@@ -36,3 +36,8 @@ class TestPlayer:
 
     def test_CanInstantiatePlayer(self):
         assert g.Player("Tiji", 1000) is not None
+
+class TestDealer:
+
+    def test_CanInstantiateDealer(self):
+        assert g.Dealer() is not None
