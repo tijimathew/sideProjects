@@ -7,8 +7,22 @@ class Game:
         self.nbrOfPlayers = nbrOfPlayers
 
 
-class Player:
+class Person:
 
-    def __init__(self, name, fundAmount):
+    def __init__(self, name):
         self.name = name
-        self.fundAmount = fundAmount
+    
+
+
+class Player(Person):
+
+    def __init_(self, name, balance):
+        Person.__init__(name)
+        self.balance = balance 
+
+class Dealer(Person):
+
+    def __init__(self):
+        self.name = 'Dealer'
+        self.balance = 0
+

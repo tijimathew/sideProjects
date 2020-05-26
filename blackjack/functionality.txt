@@ -1,14 +1,15 @@
 BlackJack - Simple text based game
 ------------------------------------
 x The game uses a deck of 52 Cards (https://en.wikipedia.org/wiki/Standard_52-card_deck)
-- Each card has a value 
+x Each card has a value 
   x K, Q, J -> Face Cards -> value = 10
-  - A -> Ace -> value = 1 or 11
-  - 2 through 10 -> number cards -> value = number on card
+  x A -> Ace -> value = 1 or 11
+  x 2 through 10 -> number cards -> value = number on card
 - There are 4 suites of each card in a deck of 52 cards.
-
-
-The game needs to have one player versus an automated dealer.
+- a player has hand of 2 cards
+- a dealer is a special player who can loose only if another player wins.
+- a dealer collects the money lost by the players and represents the games winnings at the table.
+- The game needs to have one player versus an automated dealer.
 The player can stand or hit.
 The player must be able to pick their betting amount.
 You need to keep track of the player's total money.
