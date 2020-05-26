@@ -4,17 +4,17 @@ import pytest
 import example
 
 
-class TestClass:
+class TestExample:
     
-    def test_myFunctionWithValidMockUserInput(self):
+    def test_myFunctionWithValidInput(self):
         example.input = lambda _: "test"
         output = example.myFunction()
-        assert output == "test"
+        assert output == True
 
-    def test_myFunctionWithInvalidMockUserInput(self):
+    def test_myFunctionWithInvalidInput(self):
         example.input = lambda _: "foobar"
         output = example.myFunction()
-        assert output != "test"
+        assert output == False
 
     def teardown_method(self, method):
         # This method is being called after each test case, and it will revert input back to original function

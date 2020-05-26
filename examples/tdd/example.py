@@ -1,4 +1,4 @@
 #example.py
 
 def myFunction():
-    return input("Enter this string 'test': ")
+    return input("Enter this string 'test': ").lower() == "test"
