@@ -16,8 +16,8 @@ class Person:
 
 class Player(Person):
 
-    def __init_(self, name, balance):
-        Person.__init__(name)
+    def __init__(self, name, balance):
+        Person.__init__(self, name)
         self.balance = balance 
 
 class Dealer(Person):
