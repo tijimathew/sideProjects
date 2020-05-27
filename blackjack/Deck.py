@@ -26,5 +26,10 @@ class Deck:
         self.nbrOfCards = len(self.cards)
         
     def select(self):
-        return random.choice(self.cards)
+        selectedIndex = random.choice(range(0, len(self.cards)))
+        self.nbrOfCards -= 1
+        return self.cards.pop(selectedIndex)
+
+    def reset(self):
+        self.__init__()
 

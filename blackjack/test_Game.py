@@ -1,12 +1,29 @@
 # test_Game.py
 import pytest 
 import Game as g
+import Deck as d
 
 
 class TestGame:
+    game = g.Game()
+    gameDeck = d.Deck()
 
-    def test_CanInstantiateGameForOnePlayer(self):
-        assert g.Game() is not None
+    def test_CanInstantiateGame(self):
+        assert self.game is not None
+
+    def test_CanInstantiateHandToDealer(self):
+        assert self.game.dealer is not None
+
+    def test_CanInstantiateHand(self):
+        assert g.Hand() is not None
+
+    def test_dealerMuststartwith2CardsinHand(self):
+        self.game.deal(self.gameDeck)
+        assert len(self.game.dealer.hand) == 2
+
+    def test_PlayerMuststartwith2CardsinHand(self):
+        self.game.deal(self.gameDeck)
+        assert len(self.game.players[0].hand) == 2   
 
     def test_Has13RanksForTheGame(self):
         assert len(g.rankValues) == 13
@@ -41,3 +58,8 @@ class TestDealer:
 
     def test_CanInstantiateDealer(self):
         assert g.Dealer() is not None
+
+class TestHand:
+
+    def test_CanInstantiateHand(self):
+        assert g.Hand() is not None
