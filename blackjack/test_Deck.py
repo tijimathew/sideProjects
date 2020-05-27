@@ -1,19 +1,17 @@
 # test_Deck.py
-import pytest
 import Deck as d
 
 
 class TestDeck:
 
-    
     gameDeck = d.Deck()
 
     def test_CanInstantiateSingleDeckOf52Cards(self):
         assert self.gameDeck.nbrOfCards == 52
 
     def test_CanReturnACardFromTheDeck(self):
-        assert self.gameDeck.select() is not None 
-    
+        assert self.gameDeck.select() is not None
+
     def test_WhenACardIsSelectedDeckReducesByOneCard(self):
         beforeCount = len(self.gameDeck.cards)
         self.gameDeck.select()
@@ -27,5 +25,4 @@ class TestDeck:
     def test_whenRoundIsResetThenDeckIsRestored(self):
         self.gameDeck.select()
         self.gameDeck.reset()
-        assert len(self.gameDeck.cards) == 52    
-
+        assert len(self.gameDeck.cards) == 52
